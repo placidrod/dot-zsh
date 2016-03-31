@@ -99,6 +99,10 @@ export GOPATH=$HOME/.gopath
 alias docker-init="source /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh"
 alias docker-shutdown="VBoxManage controlvm default acpipowerbutton"
 
+# PyPy alias (using virtualenv)
+alias pypy-on="source ~/.pypy/pypy2_env/bin/activate"
+alias pypy-off="deactivate"
+
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 
 # For iterm2 intergration
