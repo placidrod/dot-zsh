@@ -19,7 +19,7 @@ ZSH_THEME="myfishymod"
 # DISABLE_AUTO_UPDATE="true"
 
 # automatically upgrade itself without prompting 
-DISABLE_UPDATE_PROMPT=true
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -28,7 +28,7 @@ DISABLE_UPDATE_PROMPT=true
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -94,7 +94,10 @@ export GOPATH=$HOME/.gopath
 
 #alias ll='ls -lGa'
 #export PS1="\[\e[31m\]\u\[\e[m\]@\h:\[\e[31m\]\w\[\e[m\]\\$ "
+
+# Docker alias
 alias docker-init="source /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh"
+alias docker-shutdown="VBoxManage controlvm default acpipowerbutton"
 
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 
