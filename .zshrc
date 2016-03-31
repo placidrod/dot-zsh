@@ -115,4 +115,4 @@ alias c++='c++-4.8'
 
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm' if you really want to"
 alias safe-rm="echo Use 'trash', or the full path i.e. '/bin/rm' if you really want to"
-
+alias updatedb="sudo /usr/libexec/locate.updatedb"
