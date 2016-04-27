@@ -96,8 +96,9 @@ export GOPATH=$HOME/.gopath
 #export PS1="\[\e[31m\]\u\[\e[m\]@\h:\[\e[31m\]\w\[\e[m\]\\$ "
 
 # Docker alias
-alias docker-init="source /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh"
-alias docker-shutdown="VBoxManage controlvm default acpipowerbutton"
+# Remove these two because of switch to dlite
+# alias docker-init="source /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh"
+# alias docker-shutdown="VBoxManage controlvm default acpipowerbutton"
 alias docker-ip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
 # PyPy alias (using virtualenv)
