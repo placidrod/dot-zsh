@@ -98,6 +98,7 @@ export GOPATH=$HOME/.gopath
 # Docker alias
 alias docker-init="source /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh"
 alias docker-shutdown="VBoxManage controlvm default acpipowerbutton"
+alias docker-ip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
 # PyPy alias (using virtualenv)
 alias pypy-on="source ~/.pypy/pypy2_env/bin/activate"
@@ -108,11 +109,11 @@ test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_i
 # For iterm2 intergration
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
-alias gcc='gcc-4.8'
-alias cc='gcc-4.8'
-alias g++='g++-4.8'
-alias c++='c++-4.8'
-
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm' if you really want to"
 alias safe-rm="echo Use 'trash', or the full path i.e. '/bin/rm' if you really want to"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
+alias brew-dep='brew list | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '"'"'{printf(" %s ", $0)}'"'"'; echo ""; done'
+
+export NVM_DIR="/Users/nanw/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
