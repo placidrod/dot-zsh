@@ -18,7 +18,7 @@ ZSH_THEME="myfishymod"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# automatically upgrade itself without prompting 
+# automatically upgrade itself without prompting
 DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
@@ -58,8 +58,10 @@ plugins=(git history colored-man-pages sublime autojump zsh-syntax-highlighting)
 ## safe-paste does not work with history up arror key search why?
 
 # User configuration
+# export GOROOT=/usr/local/Cellar/go/1.8.3/libexec
+# export GOPATH=$HOME/Go
+# export PATH="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOROOT/bin:$GOPATH/bin"
 
-export PATH="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -90,7 +92,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export JAVA_HOME=$(/usr/libexec/java_home)
-export GOPATH=$HOME/.gopath
 
 #alias ll='ls -lGa'
 #export PS1="\[\e[31m\]\u\[\e[m\]@\h:\[\e[31m\]\w\[\e[m\]\\$ "
@@ -117,4 +118,3 @@ alias brew-dep='brew list | while read cask; do echo -n $fg[blue] $cask $fg[whit
 
 export NVM_DIR="/Users/nanw/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
