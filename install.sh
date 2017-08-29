@@ -1,3 +1,5 @@
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/plugins/zsh-syntax-highlighting
+
 if [ -e "~/.zshrc" ]; then
     mv ~/.zshrc ~/.zshrc.backup
 fi
