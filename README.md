@@ -1,4 +1,4 @@
-# oh-my-zsh-customs
+# dotzsh
 Personal On-My-Zsh customs
 
 ## Usage
