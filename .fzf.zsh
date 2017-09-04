@@ -74,12 +74,7 @@ fzf-history-widget() {
   selected=( $(fc -l 1 | sed 's/^[ ]*[0-9]*[* ][* ]//' | perl -ne 'print if !$seen{$_}++' |
     FZF_DEFAULT_OPTS="--exact --border --height ${FZF_TMUX_HEIGHT:-40%} $FZF_DEFAULT_OPTS --tac -n2..,.. --tiebreak=index --bind=ctrl-r:toggle-sort $FZF_CTRL_R_OPTS --query=${(q)LBUFFER} +m" $(__fzfcmd)) )
   local ret=$?
-  if [ -n "$selected" ]; then
-    num=$selected[1]
-    if [ -n "$num" ]; then
-      zle vi-fetch-history -n $num
-    fi
-  fi
+  LBUFFER=$selected
   zle redisplay
   typeset -f zle-line-init >/dev/null && zle zle-line-init
   return $ret
