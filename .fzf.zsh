@@ -30,3 +30,10 @@ fzf-history-widget() {
 }
 zle     -N   fzf-history-widget
 bindkey '^R' fzf-history-widget
+
+# no complete yet
+_fzf_complete_docker() {
+  _fzf_complete '+m' "$@" < <(
+    docker ps -a --format {{.Names}}
+  )
+}
