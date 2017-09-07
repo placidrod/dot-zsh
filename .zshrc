@@ -54,7 +54,7 @@ ZSH_CUSTOM=~/.zsh
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # !!! Note that zsh-syntax-highlighting must be the last plugin sourced, so make it the last element of the $plugins array.
-plugins=(git history extract nvm colored-man-pages sublime autojump fzf-zsh zsh-navigation-tools zsh-syntax-highlighting)
+plugins=(git history extract nvm sublime autojump zsh-syntax-highlighting)
 ## safe-paste does not work with history up arror key search why?
 
 # User configuration

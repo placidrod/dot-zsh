@@ -16,7 +16,9 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 fzf-history-widget() {
   local selected num
   setopt localoptions noglobsubst noposixbuiltins pipefail 2> /dev/null
-  selected=( $(fc -l 1 | sed 's/^[ ]*[0-9]*[* ][* ]//' | perl -ne 'print if !$seen{$_}++' |
+  selected=( $(
+    fc -ln 1 | # remove line number with -n
+    awk '!x[$0]++' | # remove duplicates
     FZF_DEFAULT_OPTS="--exact --border --height ${FZF_TMUX_HEIGHT:-40%} $FZF_DEFAULT_OPTS --tac -n2..,.. --tiebreak=index --bind=ctrl-r:toggle-sort $FZF_CTRL_R_OPTS --query=${(q)LBUFFER} +m" $(__fzfcmd)) )
   local ret=$?
   if [ -n "$selected" ]; then
