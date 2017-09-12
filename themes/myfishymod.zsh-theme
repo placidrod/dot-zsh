@@ -9,12 +9,19 @@ _fishy_collapsed_wd() {
 ')
 }
 
+_nvm_version() {
+  local ver=$(echo $NVM_BIN | sed -e "s/^.*node\/v//" -e "s/\/bin$//")
+  if [[ !  -z  $ver  ]]; then
+    echo "%{$fg[green]%}⬢$ver%{$reset_color%}"
+  fi
+}
+
 local user=''; [ $UID -eq 0 ] && user="%{$fg[red]%}%n@%m%{$reset_color%}"
 PROMPT='${user} %{$fg[green]%}$(_fishy_collapsed_wd)%{$reset_color%}%(!.#.>) '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
 
 local return_status="%{$fg_bold[red]%}%(?..%?)%{$reset_color%}"
-RPROMPT='${return_status}$(git_prompt_info)$(git_prompt_status)%{$reset_color%}'
+RPROMPT='$(_nvm_version)${return_status}$(git_prompt_info)$(git_prompt_status)%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
