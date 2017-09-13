@@ -31,18 +31,19 @@ fzf-history-widget() {
 zle     -N   fzf-history-widget
 bindkey '^R' fzf-history-widget
 
-# CTRL-I - Paste the selected entry from locate output into the command line
-fzf-locate-widget() {
-  local selected
-  if selected=$(locate / | fzf -q "$LBUFFER"); then
-    LBUFFER=$selected
-  fi
-  zle redisplay
-}
-zle     -N    fzf-locate-widget
-bindkey '^i' fzf-locate-widget
+# it makes interactive-cd stop working
+# # CTRL-I - Paste the selected entry from locate output into the command line
+# fzf-locate-widget() {
+#   local selected
+#   if selected=$(locate / | fzf -q "$LBUFFER"); then
+#     LBUFFER=$selected
+#   fi
+#   zle redisplay
+# }
+# zle     -N    fzf-locate-widget
+# bindkey '^i' fzf-locate-widget
 
-# no complete yet
+# no complete yet see https://github.com/junegunn/fzf/issues/760
 _fzf_complete_docker() {
   _fzf_complete '+m' "$@" < <(
     docker ps -a --format {{.Names}}
