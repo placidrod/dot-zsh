@@ -34,7 +34,8 @@ bindkey '^R' fzf-history-widget
 # CTRL-L - Paste the selected entry from locate output into the command line
 fzf-locate-widget() {
   local selected
-  if selected=$(locate / | fzf -q "$LBUFFER"); then
+  # use ag to filter out unwanted file types and dirs
+  if selected=$(locate ~ | ag -v 'node_modules|\/\..*|\.class$' | fzf -q "$LBUFFER"); then
     LBUFFER=$selected
   fi
   zle redisplay
