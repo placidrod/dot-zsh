@@ -31,6 +31,17 @@ fzf-history-widget() {
 zle     -N   fzf-history-widget
 bindkey '^R' fzf-history-widget
 
+# CTRL-I - Paste the selected entry from locate output into the command line
+fzf-locate-widget() {
+  local selected
+  if selected=$(locate / | fzf -q "$LBUFFER"); then
+    LBUFFER=$selected
+  fi
+  zle redisplay
+}
+zle     -N    fzf-locate-widget
+bindkey '^i' fzf-locate-widget
+
 # no complete yet
 _fzf_complete_docker() {
   _fzf_complete '+m' "$@" < <(
