@@ -54,7 +54,7 @@ ZSH_CUSTOM=~/.zsh
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # !!! Note that zsh-syntax-highlighting must be the last plugin sourced, so make it the last element of the $plugins array.
-plugins=(git history extract nvm sublime autojump zsh-syntax-highlighting)
+plugins=(git history extract nvm sublime z zsh-syntax-highlighting)
 ## safe-paste does not work with history up arror key search why?
 
 # User configuration
@@ -115,6 +115,7 @@ alias rm="echo Use 'trash', or the full path i.e. '/bin/rm' if you really want t
 alias safe-rm="echo Use 'trash', or the full path i.e. '/bin/rm' if you really want to"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias brew-dep='brew list | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '"'"'{printf(" %s ", $0)}'"'"'; echo ""; done'
+alias j='z'
 
 # Add fzf key bindings
 [ -f ~/.zsh/.fzf.zsh ] && source ~/.zsh/.fzf.zsh
