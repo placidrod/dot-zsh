@@ -54,7 +54,7 @@ ZSH_CUSTOM=~/.zsh
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # !!! Note that zsh-syntax-highlighting must be the last plugin sourced, so make it the last element of the $plugins array.
-plugins=(git history extract nvm sublime z zsh-interactive-cd zsh-syntax-highlighting)
+plugins=(git history extract nvm pyenv sublime z zsh-interactive-cd zsh-syntax-highlighting)
 ## safe-paste does not work with history up arror key search why?
 
 # User configuration
@@ -93,18 +93,8 @@ source $ZSH/oh-my-zsh.sh
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-#alias ll='ls -lGa'
-#export PS1="\[\e[31m\]\u\[\e[m\]@\h:\[\e[31m\]\w\[\e[m\]\\$ "
-
 # Docker alias
-# Remove these two because of switch to dlite
-# alias docker-init="source /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh"
-# alias docker-shutdown="VBoxManage controlvm default acpipowerbutton"
 alias docker-ip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
-
-# PyPy alias (using virtualenv)
-alias pypy-on="source ~/.pypy/pypy2_env/bin/activate"
-alias pypy-off="deactivate"
 
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 
