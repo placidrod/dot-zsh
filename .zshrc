@@ -91,15 +91,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+[ -f /usr/libexec/java_home ] && export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Docker alias
 alias docker-ip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
-test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
+[ -f ~/.iterm2_shell_integration.zsh ] && test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 
 # For iterm2 intergration
-source ~/.iterm2_shell_integration.`basename $SHELL`
+[ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.`basename $SHELL`
 
 alias rm="echo Use 'trash', or the full path i.e. '/bin/rm' if you really want to"
 alias safe-rm="echo Use 'trash', or the full path i.e. '/bin/rm' if you really want to"
