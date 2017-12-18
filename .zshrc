@@ -113,4 +113,5 @@ alias j='z'
 
 # Setup for pyenv
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+[ -r ~/.pyenv ] && eval "$(pyenv init -)"
+[ -r ~/.jenv ] && eval "$(jenv init -)"
