@@ -55,7 +55,7 @@ ZSH_HIGHLIGHT_MAXLENGTH=300
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # !!! Note that zsh-syntax-highlighting must be the last plugin sourced, so make it the last element of the $plugins array.
-plugins=(git history extract nvm sublime z zsh-interactive-cd zsh-syntax-highlighting)
+plugins=(git history extract nvm z zsh-interactive-cd zsh-syntax-highlighting)
 ## safe-paste does not work with history up arror key search why?
 
 # User configuration
