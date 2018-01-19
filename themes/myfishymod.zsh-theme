@@ -10,7 +10,7 @@ _fishy_collapsed_wd() {
 }
 
 _nvm_version() {
-  local ver=$(echo $NVM_BIN | sed -e "s/^.*node\/v//" -e "s/\/bin$//")
+  local ver=$(nodenv version | sed -e "s/\ .*$//" -e "s/system//")
   if [[ !  -z  $ver  ]]; then
     echo " %{$fg[green]%}⬢$ver%{$reset_color%}"
   fi
