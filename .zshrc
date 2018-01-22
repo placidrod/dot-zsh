@@ -49,13 +49,14 @@ HIST_STAMPS="yyyy-mm-dd"
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=~/.zsh
 ZSH_HIGHLIGHT_MAXLENGTH=300
-
+FZ_CMD=j
+FZ_SUBDIR_CMD=jj
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # !!! Note that zsh-syntax-highlighting must be the last plugin sourced, so make it the last element of the $plugins array.
-plugins=(git history extract z zsh-interactive-cd zsh-syntax-highlighting)
+plugins=(git history extract z fz zsh-interactive-cd zsh-syntax-highlighting)
 ## safe-paste does not work with history up arror key search why?
 
 # User configuration
@@ -106,7 +107,7 @@ alias rm="echo Use 'trash', or the full path i.e. '/bin/rm' if you really want t
 alias safe-rm="echo Use 'trash', or the full path i.e. '/bin/rm' if you really want to"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias brew-dep='brew list | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '"'"'{printf(" %s ", $0)}'"'"'; echo ""; done'
-alias j='z'
+# alias j='z'
 
 # Add fzf key bindings
 [ -f ~/.zsh/.fzf.zsh ] && source ~/.zsh/.fzf.zsh
