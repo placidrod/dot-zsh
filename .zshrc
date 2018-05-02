@@ -127,6 +127,3 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
-
-# use kubectl 1.8.5
-[ -f ~/.bin_override/kubectl ] && alias kubectl="~/.bin_override/kubectl"
