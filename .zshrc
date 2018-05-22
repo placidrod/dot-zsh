@@ -127,3 +127,10 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+
+# Notifier
+NOTIFICATION_THRESHOLD=120
+NOTIFICATION_BLACKLIST=^(git|tig|vi|vim|ssh|scala|sbt|jshell).*$
+[ -f ~/.zsh/script/notifier.zsh ] && source ~/.zsh/script/notifier.zsh
+
+alias tn="terminal-notifier -sound default -message "
