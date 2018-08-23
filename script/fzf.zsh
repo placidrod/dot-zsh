@@ -1,21 +1,4 @@
-# Setup fzf
-# ---------
-if [ -d /usr/local/opt/fzf ] ; then
-    local fzf_home="/usr/local/opt/fzf"
-    source "$fzf_home/shell/completion.zsh" 2> /dev/null
-    source "$fzf_home/shell/key-bindings.zsh"
-    if [[ ! "$PATH" == */fzf/bin* ]]; then
-      export PATH="$PATH:$fzf_home/bin"
-    fi
-elif [ -d ~/.fzf ] ; then
-    source "$HOME/.fzf/shell/completion.zsh" 2> /dev/null
-    source "$HOME/.fzf/shell/key-bindings.zsh"
-    if [[ ! "$PATH" == */fzf/bin* ]]; then
-      export PATH="$PATH:$HOME/.fzf/bin"
-    fi
-else
-    echo "Error: fzf not installed!!!"
-fi
+### Extra functions for fzf ###
 
 # CTRL-R - Paste the selected command from history into the command line
 fzf-history-widget() {
