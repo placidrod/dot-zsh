@@ -17,7 +17,7 @@ zplug "~/.zsh/script", from:local, use:"alias.zsh"
 zplug "~/.zsh/script", from:local, use:"notifier.zsh"
 zplug "~/.zsh/script", from:local, use:"xenv.zsh"
 zplug "~/.zsh/script", from:local, use:"fzf.zsh", defer:1
-zplug "~/.zsh/themes", from:local, as:theme, use:"myfishymod.zsh-theme"
+zplug "~/.zsh/themes", from:local, as:theme, use:"gentoo-placid.zsh-theme"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -30,6 +30,10 @@ fi
 zplug load
 
 # Misc
+export GOPATH=/Users/placidr/Code
+export PATH=$GOPATH/bin:$PATH
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 [ -f /usr/libexec/java_home ] && export JAVA_HOME=$(/usr/libexec/java_home)
 [ -f ~/.iterm2_shell_integration.zsh ] && test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 [ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.`basename $SHELL`
