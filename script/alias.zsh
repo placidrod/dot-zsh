@@ -26,3 +26,7 @@ alias kus='kubectl --context=us'
 alias kfr='kubectl --context=fr'
 alias kcn='kubectl --context=cn'
 
+alias repui='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript repui.scpt;'
+alias wysi='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript wysi.scpt;'
+alias onboard='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript onboard.scpt;'
+alias scpt='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript test.scpt;'
