@@ -21,3 +21,8 @@ alias gol='/usr/local/opt/go/libexec/bin/go'
 
 alias atm="$HOME/Code/src/github.com/movio/mc-atm-dev/run.sh"
 alias cat=ccat
+
+alias kus='kubectl --context=us'
+alias kfr='kubectl --context=fr'
+alias kcn='kubectl --context=cn'
+
