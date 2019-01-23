@@ -30,3 +30,12 @@ alias repui='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript repui.
 alias wysi='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript wysi.scpt;'
 alias onboard='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript onboard.scpt;'
 alias scpt='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript test.scpt;'
+
+##
+# AWS - Helper Functions
+##
+source ~/.awsAliases
+alias awsall="_awsListAll"
+alias awslp="_awsListProfile"
+alias awsp="_awsSwitchProfile"
+alias awswho="aws configure list"
