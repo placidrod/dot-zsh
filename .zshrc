@@ -16,6 +16,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "~/.zsh/script", from:local, use:"alias.zsh"
 zplug "~/.zsh/script", from:local, use:"notifier.zsh"
 zplug "~/.zsh/script", from:local, use:"xenv.zsh"
+zplug "~/.zsh/script", from:local, use:"k5l.zsh"
 zplug "~/.zsh/script", from:local, use:"fzf.zsh", defer:1
 zplug "~/.zsh/themes", from:local, as:theme, use:"gentoo-placid.zsh-theme"
 
