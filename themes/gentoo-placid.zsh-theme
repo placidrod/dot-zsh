@@ -17,14 +17,28 @@ function prompt_char {
 # }
 
 # Manipulate path string with node
-_fishy_collapsed_node() {
-  echo $(node -p "const pwd = process.cwd().replace(process.env.HOME, '~'); 
-  const s = pwd.split('/'); 
-  s.length > 4 ? (s[0]+'/'+s[1]+'/.../'+s[s.length-2]+'/'+s[s.length-1]) : pwd")
+# _fishy_collapsed_node() {
+#   echo $(node -p "const pwd = process.cwd().replace(process.env.HOME, '~'); 
+#   const s = pwd.split('/'); 
+#   s.length > 4 ? (s[0]+'/'+s[1]+'/.../'+s[s.length-2]+'/'+s[s.length-1]) : pwd")
+# }
+
+# Manipulate path string using awk
+_fishy_collapsed_awk() {
+  echo ${PWD/#$HOME/'~'} | awk -F '/' '
+    BEGIN{ORS="/"}
+    { 
+      for (i = 1; i <= NF; i++) {
+        if (i == 1 || i == 2 || i == NF - 1 || i == NF) print $i;
+        else if (i == 3) print "..."
+      }
+    }
+  ' | sed 's/.$//'
 }
 
+
 # using _fishy_collapsed_node
-PROMPT='%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}) %{$fg_bold[green]%}$(_fishy_collapsed_node)%{$reset_color%} %{$fg_bold[blue]%}$(git_prompt_info)%_%{$reset_color%}%{$fg_bold[white]%}$(prompt_char)%{$reset_color%} '
+PROMPT='%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}) %{$fg_bold[green]%}$(_fishy_collapsed_awk)%{$reset_color%} %{$fg_bold[blue]%}$(git_prompt_info)%_%{$reset_color%}%{$fg_bold[white]%}$(prompt_char)%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="("
 ZSH_THEME_GIT_PROMPT_SUFFIX=") "
