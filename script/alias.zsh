@@ -23,9 +23,10 @@ alias gol='/usr/local/opt/go/libexec/bin/go'
 alias atm="$HOME/Code/src/github.com/movio/mc-atm-dev/run.sh"
 alias cat=ccat
 
-alias kus='kubectl --context=us'
-alias kfr='kubectl --context=fr'
-alias kcn='kubectl --context=cn'
+alias kus='kubectl --context=movio-prod-us'
+alias kfr='kubectl --context=movio-prod-fr'
+alias kcn='kubectl --context=movio-prod-cn'
+alias keu='kubectl --context=movio-prod-eu'
 
 alias repui='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript repui.scpt;'
 alias autoui='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript autorepui.scpt;'
