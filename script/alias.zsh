@@ -34,6 +34,8 @@ alias wysi='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript wysi.sc
 alias onboard='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript onboard.scpt;'
 alias scpt='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript test.scpt;'
 
+alias android-studio="open -a /Applications/Android\ Studio.app/"
+
 ##
 # AWS - Helper Functions
 ##

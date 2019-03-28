@@ -13,3 +13,9 @@ export ZSH_HIGHLIGHT_MAXLENGTH=300
 export NOTIFICATION_THRESHOLD=120
 export NOTIFICATION_BLACKLIST=^(git|tig|vi|vim|ssh|scala|sbt|jshell).*$
 export ZPLUG_HOME=~/.zplug
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
