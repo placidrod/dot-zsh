@@ -15,8 +15,12 @@ alias gco='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
 alias gfp='git fetch --prune'
+alias gua='git reset HEAD -- .' # git unstage all
+alias gulc='git reset HEAD~' # git undo last commit
+alias gaac='git add -A && git commit -m' # git add all and commit
 alias grom='git rebase origin/master'
 alias gpfl='git push --force-with-lease'
+alias gh='git hist'
 
 alias gol='/usr/local/opt/go/libexec/bin/go'
 

@@ -40,3 +40,8 @@ export AWS_PROFILE=movio-identity
 [ -f ~/.iterm2_shell_integration.zsh ] && test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 [ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.`basename $SHELL`
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+
+
+decode () {
+  echo "$1" | base64 -D ; echo
+}
