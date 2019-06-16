@@ -21,8 +21,11 @@ alias gaac='git add -A && git commit -m' # git add all and commit
 alias grom='git rebase origin/master'
 alias gpfl='git push --force-with-lease'
 alias gh='git hist'
+alias gadded='git log --diff-filter=A -- ' # which commit added a file
+alias gmodified='git log --diff-filter=M -- ' # which commits modified a file
+alias gdeleted='git log --diff-filter=D -- ' # which commit deleted a file
 
-alias gol='/usr/local/opt/go/libexec/bin/go'
+# alias gol='/usr/local/opt/go/libexec/bin/go'
 
 alias atm="$HOME/Code/src/github.com/movio/mc-atm-dev/run.sh"
 alias cat=ccat
