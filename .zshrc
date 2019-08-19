@@ -34,6 +34,7 @@ zplug load
 export GOPATH=/Users/placidr/Code
 export PATH=$GOPATH/bin:$PATH
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# export PATH="$HOME/Code/src/github.com/magito:$PATH"
 export AWS_PROFILE=movio-identity
 
 [ -f /usr/libexec/java_home ] && export JAVA_HOME=$(/usr/libexec/java_home)
@@ -45,3 +46,16 @@ export AWS_PROFILE=movio-identity
 decode () {
   echo "$1" | base64 -D ; echo
 }
+
+decopy () {
+  echo "$1" | base64 -D | pbcopy
+}
+
+dbash () {
+  docker exec -ti "$1" bash
+}
+
+# trying to pretty print the decoded json. not working yet.
+# dejson () {
+#   echo "$1" | base64 -D | xargs echo | jq .
+# }
