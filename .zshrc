@@ -55,6 +55,10 @@ dbash () {
   docker exec -ti "$1" bash
 }
 
+mdcd () {
+  md $1 && cd $1
+}
+
 # trying to pretty print the decoded json. not working yet.
 # dejson () {
 #   echo "$1" | base64 -D | xargs echo | jq .
