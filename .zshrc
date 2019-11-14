@@ -33,6 +33,7 @@ zplug load
 # Misc
 export GOPATH=/Users/placidr/Code
 export PATH=$GOPATH/bin:$PATH
+export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # export PATH="$HOME/Code/src/github.com/magito:$PATH"
 export AWS_PROFILE=movio-identity
