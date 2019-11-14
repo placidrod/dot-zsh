@@ -32,6 +32,9 @@ zplug load
 
 # Misc
 export GOPATH=/Users/placidr/Code
+export GONOSUMDB=github.com/movio/*
+export GOCACHE=/Users/placidr/gocache
+export GOPROXY=https://goproxy.tools.prod.movio.co/athens
 export PATH=$GOPATH/bin:$PATH
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
