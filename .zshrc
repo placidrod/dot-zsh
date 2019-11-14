@@ -37,7 +37,7 @@ export GOCACHE=/Users/placidr/gocache
 export GOPROXY=https://goproxy.tools.prod.movio.co/athens
 export PATH=$GOPATH/bin:$PATH
 export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/Code/src/github.com/movio/scripts:$PATH"
 # export PATH="$HOME/Code/src/github.com/magito:$PATH"
 export AWS_PROFILE=movio-identity
 
