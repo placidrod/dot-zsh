@@ -5,7 +5,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sb
 export MANPATH="/usr/local/man:$MANPATH"
 export FZF_DEFAULT_OPTS="--color=pointer:15,fg:247,fg+:15,hl:10 --cycle"
 export FZF_COMPLETION_TRIGGER="?"
-export PYENV_ROOT="$HOME/.pyenv"
+# export PYENV_ROOT="$HOME/.pyenv"
 export FZ_CMD=j
 export FZ_SUBDIR_CMD=jj
 export HIST_STAMPS="yyyy-mm-dd"
