@@ -53,6 +53,8 @@ alias kdev1='kubectl --context=movio-dev -n mc-app-pr'
 alias repui='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript repui.scpt;'
 alias autoui='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript autorepui.scpt;'
 alias wysi='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript wysi.scpt;'
+alias appui='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript appui.scpt;'
+
 alias onboard='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript onboard.scpt;'
 alias scpt='cd ~/Library/Application\ Support/iTerm2/Scripts/; osascript test.scpt;'
 
