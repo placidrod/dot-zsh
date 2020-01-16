@@ -37,6 +37,7 @@ export GOCACHE=/Users/placidr/gocache
 export GOPROXY=https://goproxy.tools.prod.movio.co/athens
 export PATH=$GOPATH/bin:$PATH
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.nodenv/versions/12.13.1/bin:$PATH"
 export PATH="$HOME/Library/Python/3.7/bin:$PATH" # this is for aws
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/Code/src/github.com/movio/scripts:$PATH"
 # export PATH="$HOME/Code/src/github.com/magito:$PATH"
@@ -46,7 +47,6 @@ export AWS_PROFILE=movio-identity
 [ -f ~/.iterm2_shell_integration.zsh ] && test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 [ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.`basename $SHELL`
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
-
 
 decode () {
   echo "$1" | base64 -D ; echo

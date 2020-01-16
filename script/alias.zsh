@@ -20,10 +20,10 @@ alias gulc='git reset HEAD~' # git undo last commit
 alias gaac='git add -A && git commit -m' # git add all and commit
 alias grom='git rebase origin/master'
 alias gpfl='git push --force-with-lease'
-alias gh='git hist'
 alias gadded='git log --diff-filter=A -- ' # which commit added a file
 alias gmodified='git log --diff-filter=M -- ' # which commits modified a file
 alias gdeleted='git log --diff-filter=D -- ' # which commit deleted a file
+# alias gh='git hist'
 
 # alias gol='/usr/local/opt/go/libexec/bin/go'
 
@@ -34,6 +34,8 @@ alias cat=ccat
 # alias kfr='kubectl --context=movio-prod-fr'
 # alias kcn='kubectl --context=movio-prod-cn'
 # alias keu='kubectl --context=movio-prod-eu'
+
+alias kus.green='kus -n mc-green'
 
 alias krus='kubectl --context=old-us --namespace=mc-red'
 alias krfr='kubectl --context=old-fr --namespace=mc-red'
