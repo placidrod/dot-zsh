@@ -9,4 +9,4 @@
 [ -r ~/.jenv ] && eval "$(jenv init -)"
 
 # Nodenv
-[ -r ~/.nodenv ] && eval "$(nodenv init -)"
+# [ -r ~/.nodenv ] && eval "$(nodenv init -)"

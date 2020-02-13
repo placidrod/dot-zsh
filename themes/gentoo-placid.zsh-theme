@@ -43,11 +43,11 @@ PROMPT='%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}) %{$fg_bold[green]%}$(_fishy_c
 ZSH_THEME_GIT_PROMPT_PREFIX="("
 ZSH_THEME_GIT_PROMPT_SUFFIX=") "
 
-_node_version() {
-  local ver=$(nodenv version-name | sed -e "s/system//")
-  if [[ !  -z  $ver  ]]; then
-    echo " %{$fg[green]%}⬢ $ver%{$reset_color%}"
-  fi
-}
-local return_status=" %{$fg_bold[red]%}%(?..%?)%{$reset_color%}"
-RPROMPT='${return_status}$(_node_version)%{$reset_color%}'
+# _node_version() {
+#   local ver=$(nodenv version-name | sed -e "s/system//")
+#   if [[ !  -z  $ver  ]]; then
+#     echo " %{$fg[green]%}⬢ $ver%{$reset_color%}"
+#   fi
+# }
+# local return_status=" %{$fg_bold[red]%}%(?..%?)%{$reset_color%}"
+# RPROMPT='${return_status}$(_node_version)%{$reset_color%}'
