@@ -71,6 +71,13 @@ mdcd () {
   md $1 && cd $1
 }
 
+# accepts ordinal number of previous commits
+# last commit number is 0, second last commit is 1 etc.
+gshow () {
+  previous_head=`expr $1 + 1`
+  git diff HEAD~$previous_head HEAD~$1
+}
+
 # trying to pretty print the decoded json. not working yet.
 # dejson () {
 #   echo "$1" | base64 -D | xargs echo | jq .
