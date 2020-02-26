@@ -72,10 +72,21 @@ mdcd () {
 }
 
 # accepts ordinal number of previous commits
-# last commit number is 0, second last commit is 1 etc.
+# can accept zero, one or two args
+  # zero arg: will run `git show`
+  # one arg: will show diff between the commit at given arg and the commit before that
+  # two arg: will show diff between second and first commit
 gshow () {
-  previous_head=`expr $1 + 1`
-  git diff HEAD~$previous_head HEAD~$1
+  if [ $# -eq 0 ]
+  then
+    git show
+  elif [ $# -eq 1 ]
+  then
+    previous_head=`expr $1 + 1`
+    git diff HEAD~$previous_head HEAD~$1
+  else
+    git diff HEAD~$2 HEAD~$1
+  fi
 }
 
 # trying to pretty print the decoded json. not working yet.
